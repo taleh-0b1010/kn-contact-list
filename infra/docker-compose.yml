@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  auth-postgresql:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=user123
+    ports:
+      - 5434:5432

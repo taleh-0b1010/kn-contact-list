@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-initial-contacts-to-table
+      author: taleh.gurbanzade
+      changes:
+        - loadData:
+            file: liquibase/people.csv
+            schemaName: public
+            separator: ;
+            tableName: contact

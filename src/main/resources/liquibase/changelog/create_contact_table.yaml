@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-contact-table
+      author: taleh.gurbanzade
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_c_id
+                  name: id
+                  type: bigint
+              - column:
+                  name: first_name
+                  type: VARCHAR(30)
+              - column:
+                  name: last_name
+                  type: VARCHAR(30)
+              - column:
+                  name: image
+                  type: VARCHAR
+              - column:
+                  name: created
+                  type: datetime
+                  defaultValue: now()
+              - column:
+                  name: updated
+                  type: datetime
+                  defaultValue: now()
+            tableName: contact
